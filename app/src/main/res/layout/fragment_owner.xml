@@ -4,8 +4,93 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:orientation="vertical"
-
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <Button
+        android:textSize="@dimen/h1"
+        android:text="ร้านรับซื้อยางพารา"
+        android:background="@color/colorWhite"
+        android:layout_width="500dp"
+        android:layout_height="80dp" />
+
+
+    <!--WallPaper-->
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+
+                android:id="@+id/btno1"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text=" รับซื้อยาง "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+
+            <Button
+
+                android:id="@+id/btno2"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text=" ราคา "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+
+                android:id="@+id/btno3"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text=" ลูกค้า "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+            <Button
+
+                android:id="@+id/btno4"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text=" ข้อมูลการซื้อ "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
 
 
 

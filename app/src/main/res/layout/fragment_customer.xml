@@ -7,6 +7,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:textSize="@dimen/h1"
+        android:text="ลูกค้า"
+        android:background="@color/colorWhite"
+        android:layout_width="500dp"
+        android:layout_height="80dp" />
+
+    <!--WallPaper-->
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+
+                android:id="@+id/btnc1"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text=" ข้อมูลส่วนตัว "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+            <Button
+
+                android:id="@+id/btnC2"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text=" เช็คราคายาง "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+
+                android:id="@+id/btnC3"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text=" เงินฝาก "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+            <Button
+
+                android:id="@+id/btnC4"
+                android:textSize="@dimen/h2"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="ข้อมูลการขาย "
+                android:layout_width="130dp"
+                android:layout_height="150dp" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
 
 
 </RelativeLayout>
