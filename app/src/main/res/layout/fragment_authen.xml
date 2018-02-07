@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--WallPaper-->
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--content-->
+    <LinearLayout
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:background="#b4ffffff"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!--Logo-->
+        <ImageView
+            android:layout_width="@dimen/logo"
+            android:layout_height="@dimen/logo"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo" />
+
+        <!--App Name-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/thai_name"
+            android:textColor="#039e44"
+            android:textSize="@dimen/h1"
+            android:textStyle="bold" />
+
+        <!--Id Store-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <!--Icon-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_store" />
+
+            <!--TextField-->
+            <EditText
+                android:id="@+id/edtIdStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/id_store"
+                android:inputType="text"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <!--Password-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Icon-->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_password" />
+
+            <!--TextField-->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <!--Category-->
+        <RadioGroup
+            android:id="@+id/ragCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <!--Buyer-->
+            <RadioButton
+                android:id="@+id/radOwner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ร้านยาง" />
+
+            <!--Saleser-->
+            <RadioButton
+                android:id="@+id/radCustomers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="ลูกค้า" />
+
+        </RadioGroup>
+
+        <!--Login Button-->
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="เข้าสู่ระบบ"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/h2" />
+
+        <!--New Register-->
+        <Button
+            android:onClick="onClickNext"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGray"
+            android:text="สมัครร้านยาง"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/h2" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
