@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Rubber Shop</string>
+    <string name="thai_name">ร้านรับซื้อยางพารา</string>
+    <string name="name_store">ชื่อร้าน :</string>
+    <string name="id_store">รหัสร้าน :</string>
+    <string name="password">รหัสผ่าน :</string>
 </resources>
