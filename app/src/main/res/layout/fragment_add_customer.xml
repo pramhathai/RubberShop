@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+    
+    <!--content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:background="#b4ffffff"
+            android:padding="@dimen/margin"
+            android:layout_margin="@dimen/margin"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Name Store-->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--ICon-->
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--Text Name-->
+                <EditText
+                    android:hint="ชื่อลูกค้า :"
+                    android:id="@+id/edtNameStore"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent" />
+
+
+            </LinearLayout>
+
+
+            <!--LName Store-->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--ICon-->
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--Text LName-->
+                <EditText
+                    android:hint="นามสกุลลูกค้า :"
+                    android:id="@+id/edtNameStore1"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent" />
+
+
+            </LinearLayout>
+
+            <!--Address Store-->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--ICon-->
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--Text Name-->
+                <EditText
+                    android:hint="ที่อยู่ :"
+                    android:id="@+id/edtNameStore2"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent" />
+
+
+            </LinearLayout>
+
+            <!--Phone Store-->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--ICon-->
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--Text phone-->
+                <EditText
+                    android:hint="เบอร์โทร :"
+                    android:id="@+id/edtNameStore6"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent" />
+
+
+            </LinearLayout>
+            <!--User Store-->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--ICon-->
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_userlogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--Text user-->
+                <EditText
+                    android:hint="User Login :"
+                    android:id="@+id/edtNameStore5"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <!--password Store-->
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--ICon-->
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_password" />
+
+                <!--Text pass-->
+                <EditText
+                    android:id="@+id/edtNameStore4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="password :"
+                    android:inputType="text"
+                    android:textColor="@color/colorAccent" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
