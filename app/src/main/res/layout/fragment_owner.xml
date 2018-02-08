@@ -8,15 +8,7 @@
     android:layout_height="match_parent">
 
 
-    <Button
-        android:gravity="center"
-        android:background="#82feffff"
-        android:padding="5dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/h1"
-        android:text="ร้านรับซื้อยางพารา"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
 
 
     <!--WallPaper-->
@@ -26,11 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+
     <LinearLayout
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -76,7 +71,7 @@
                 android:layout_height="150dp">
 
                 <ImageView
-                    android:id="@+id/btno1"
+                    android:id="@+id/btno12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/textView4"
@@ -116,7 +111,7 @@
                 android:layout_height="150dp">
 
                 <ImageView
-                    android:id="@+id/btno1"
+                    android:id="@+id/btno13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/textView"
