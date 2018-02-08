@@ -130,35 +130,35 @@
             </LinearLayout>
             <!--User Store-->
             <LinearLayout
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="43dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
 
                 <!--ICon-->
                 <ImageView
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/ic_action_userlogin"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_userlogin" />
 
                 <!--Text user-->
-                <EditText
-                    android:hint="User Login :"
+                <TextView
                     android:id="@+id/edtNameStore5"
-                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="User Login :"
+                    android:inputType="text"
                     android:textColor="@color/colorAccent" />
 
             </LinearLayout>
 
             <!--password Store-->
             <LinearLayout
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="47dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
 
                 <!--ICon-->
                 <ImageView
@@ -168,13 +168,14 @@
                     android:src="@drawable/ic_action_password" />
 
                 <!--Text pass-->
-                <EditText
-                    android:id="@+id/edtNameStore4"
+                <TextView
+                    android:id="@+id/edtNameStore5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="password :"
+                    android:hint="User Login :"
                     android:inputType="text"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorAccent"
+                /
 
 
             </LinearLayout>
