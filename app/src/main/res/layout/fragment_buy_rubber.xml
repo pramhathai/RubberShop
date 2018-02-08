@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <!--content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:background="#b4ffffff"
+
+        android:padding="@dimen/margin"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="73dp">
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/btno5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/colorWhite"
+                android:src="@drawable/sheet"
+                android:text=" รับซื้อยาง "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h2" />
+
+            <TextView
+                android:gravity="center"
+                android:background="#82c75ef7"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/h2"
+                android:text="รับซื้อยาง"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="150dp">
+
+            <ImageView
+
+                android:id="@+id/btno7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/colorWhite"
+                android:src="@drawable/sheet"
+                android:text=" รับซื้อยาง "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h2" />
+
+            <TextView
+                android:gravity="center"
+                android:background="#82c75ef7"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/h2"
+                android:text="รับซื้อยางแผ่น"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/btno1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/colorWhite"
+                android:src="@drawable/sheet"
+                android:text=" รับซื้อยาง "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/h2" />
+
+            <TextView
+                android:gravity="center"
+                android:background="#82c75ef7"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/h2"
+                android:text="รับซื้อยางก้อน"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3" />
+
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
