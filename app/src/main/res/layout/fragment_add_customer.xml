@@ -144,7 +144,7 @@
 
                 <!--Text user-->
                 <TextView
-                    android:id="@+id/edtNameStore5"
+                    android:id="@+id/edtNameStore7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="User Login :"
@@ -174,8 +174,7 @@
                     android:layout_height="wrap_content"
                     android:hint="User Login :"
                     android:inputType="text"
-                    android:textColor="@color/colorAccent"
-                /
+                    android:textColor="@color/colorAccent"/>
 
 
             </LinearLayout>
@@ -183,4 +182,5 @@
         </LinearLayout>
 
     </ScrollView>
+
 </LinearLayout>
