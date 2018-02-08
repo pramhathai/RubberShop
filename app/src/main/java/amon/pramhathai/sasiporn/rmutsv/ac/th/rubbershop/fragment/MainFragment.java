@@ -21,13 +21,13 @@ public class MainFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
 
 //        Authen Controller
-        authenController();
+        authenController();                                                 // มาจากการกด option+command+m
 
 
     }   // main method
 
     private void authenController() {
-        Button button = getView().findViewById(R.id.btnstart);
+        Button button = getView().findViewById(R.id.btnstart);              //  เสร็จบรรทัดนี้ คุมทั้งบรรทัด กด option+command+m
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

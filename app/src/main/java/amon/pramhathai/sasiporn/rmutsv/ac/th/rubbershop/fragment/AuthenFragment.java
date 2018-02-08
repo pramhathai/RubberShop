@@ -3,12 +3,22 @@ package amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.R;
+import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.GetAllValueFromServer;
+import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.MyAlert;
+import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.MyConstant;
 
 /**
  * Created by sasiporn on 2/7/2018 AD.
@@ -16,18 +26,160 @@ import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.R;
 
 public class AuthenFragment extends Fragment {
 
+    private String urlCategoryString, userString, passwordString;
+    private MyConstant myConstant;
+    private RadioButton ownerRadioButton, coutomerRadioButton;
+
+
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+//        Setup Constant
+        setupConstant();
+
 //        Register Controller
-        registerController();
+        registerController();                                            // มาจากการกด option+command+m
+
+//        Category Controller
+        categoryController();                                           // มาจากการกด option+command+m
+
+//        Login Conller
+        loginConller();                                                 // มาจากการกด option+command+m
 
 
     }   // main method
 
+    private void loginConller() {
+        Button button = getView().findViewById(R.id.btnlogin);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                EditText userEditText = getView().findViewById(R.id.edtIdStore);
+                EditText passwordEditText = getView().findViewById(R.id.edtPassword);
+
+                userString = userEditText.getText().toString().trim();
+                passwordString = passwordEditText.getText().toString().trim();
+
+                if (userString.isEmpty() || passwordString.isEmpty()) {
+//                    Have Space
+                    MyAlert myAlert = new MyAlert(getActivity());
+                    myAlert.normalDialog(getString(R.string.title_have_space)
+                    ,getString(R.string.message_have_space));
+
+                } else {
+//                    NO Space
+                    try {
+
+                        GetAllValueFromServer getAllValueFromServer = new GetAllValueFromServer(getActivity());
+                        getAllValueFromServer.execute(urlCategoryString);
+                        boolean userAboolean = true;
+                        boolean passwordAboolean = true;
+
+                        String jsonString = getAllValueFromServer.get();
+                        showLog("JSON ==>" + jsonString);
+
+                        JSONArray jsonArray = new JSONArray(jsonString);
+                        for (int i=0; i<jsonArray.length();i+=1) {
+
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+
+                            if (ownerRadioButton.isChecked()) {
+
+//                            Choose Owner
+                                if (userString.equals(jsonObject.getString("o_idshop"))) {
+//                                    User True
+                                    userAboolean = false;
+                                    passwordAboolean = !(passwordString.equals(jsonObject.getString("o_password")));
+
+                                }
+
+                            } else {
+
+//                            Choose Customer
+
+
+                            }   // if
+
+
+                        }   // for
+
+                        if (userAboolean) {
+
+//                            User False
+                            MyAlert myAlert = new MyAlert(getActivity());
+                            myAlert.normalDialog("User False",
+                                    "No This User in my Database");
+
+                        } else if (passwordAboolean) {
+
+//                            Password False
+                            MyAlert myAlert = new MyAlert(getActivity());
+                            myAlert.normalDialog("Password False",
+                                    "Please Try Again Password False");
+
+
+
+                        } else {
+
+//                            Authen True
+                        }
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }   // if
+
+            }   //onClick
+        });
+
+
+    }
+
+    private void setupConstant() {
+        myConstant = new MyConstant();
+        urlCategoryString = myConstant.getUrlGetAllOwner();
+
+        ownerRadioButton = getView().findViewById(R.id.radOwner);
+        coutomerRadioButton = getView().findViewById(R.id.radCustomers);
+    }
+
+    private void categoryController() {
+        RadioGroup radioGroup = getView().findViewById(R.id.ragCategory);   //  เสร็จบรรทัดนี้ คุมทั้งบรรทัด กด option+command+m
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                switch (i) {
+
+                    case R.id.radOwner:
+                        urlCategoryString = myConstant.getUrlGetAllOwner();
+                        break;
+
+                    case R.id.radCustomers:
+                        urlCategoryString = myConstant.getUrlGetAllCustomer();
+                        break;
+                }
+
+                showLog("urlCategory ==> " +urlCategoryString);
+
+            }
+        });
+
+
+
+    }
+
+    private void showLog(String messageString) {
+        Log.d("8FebV1", messageString);
+    }
+
     private void registerController() {
-        Button button = getView().findViewById(R.id.btnRegister);
+        Button button = getView().findViewById(R.id.btnRegister);           //  เสร็จบรรทัดนี้ คุมทั้งบรรทัด กด option+command+m
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
