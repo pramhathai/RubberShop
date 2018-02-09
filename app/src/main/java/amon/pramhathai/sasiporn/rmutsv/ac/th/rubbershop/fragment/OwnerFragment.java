@@ -56,15 +56,12 @@ public class OwnerFragment extends Fragment {
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.contentOwnerFragment,
-                                BuyRubberFragment.buyRubberInstance(loginStrings))
+                        .replace(R.id.contentOwnerFragment, BuyRubberFragment.buyRubberInstance(loginStrings))
                         .addToBackStack(null)
                         .commit();
 
             }
         });
-
-
 
     }
 

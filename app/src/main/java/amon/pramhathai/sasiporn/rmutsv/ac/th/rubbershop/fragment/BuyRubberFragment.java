@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.OwnerActivity;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.R;
@@ -37,8 +38,45 @@ public class BuyRubberFragment extends Fragment {
 //        Create Toolbar
         createToolbar();
 
+//        Latex Controller
+        latexController();
+
+//        Sheet Controller
+        sheetController();
 
     }   // main method
+
+    private void sheetController() {
+        ImageView imageView = getView().findViewById(R.id.imvSheetRubber);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentOwnerFragment,
+                                SheetRubberFragment.sheetRubberFragment(loginStrings))
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
+    }
+
+    private void latexController() {
+        ImageView imageView = getView().findViewById(R.id.imvlatexRubber);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentOwnerFragment,
+                                LatexRubberFragment.latexRubberFragment(loginStrings))
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+    }
 
     private void createToolbar() {
         Toolbar toolbar = getView().findViewById(R.id.toolbarBuyRubber);

@@ -29,6 +29,7 @@
 
 
             <ImageView
+                android:id="@+id/imvlatexRubber"
             android:layout_width="230dp"
             android:layout_height="95dp"
             android:background="@drawable/prub"
@@ -48,6 +49,7 @@
             android:textSize="@dimen/h2" />
 
         <ImageView
+            android:id="@+id/imvSheetRubber"
                         android:layout_marginTop="8dp"
                         android:textColor="@color/colorPrimaryDark"
                         android:background="@drawable/prrrub"
@@ -68,6 +70,7 @@
             android:textSize="@dimen/h2" />
 
         <ImageView
+            android:id="@+id/imvcubeRubber"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/colorWhite"
                 android:background="@drawable/prrub"

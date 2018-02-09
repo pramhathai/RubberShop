@@ -12,6 +12,7 @@
     <string name="add_customer">เพิ่มข้อมูลลูกค้าใหม่</string>
     <string name="connot_server">ไม่สามารถบันทึกข้อมูลได้</string>
     <string name="buy_rubber">รับซื้อยาง</string>
-    <string name="sheetrubber">รับซื้อยางแผ่น</string>
+    <string name="latex_rubber">รับซื้อน้ำยาง</string>
+    <string name="sheet_rubber">รับซื้อยางแผ่น</string>
 
 </resources>
