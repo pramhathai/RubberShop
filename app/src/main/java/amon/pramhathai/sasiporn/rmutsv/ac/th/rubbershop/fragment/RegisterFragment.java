@@ -45,7 +45,6 @@ public class RegisterFragment extends Fragment{
 
 
 
-
     private void saveController() {
         Button button = getView().findViewById(R.id.btnSave);               //  เสร็จบรรทัดนี้ คุมทั้งบรรทัด กด option+command+m
         button.setOnClickListener(new View.OnClickListener() {
@@ -101,9 +100,7 @@ public class RegisterFragment extends Fragment{
     }
 
     private void createIdShop() {
-
         TextView textView = getView().findViewById(R.id.txtIdStore);        //  เสร็จบรรทัดนี้ คุมทั้งบรรทัด กด option+command+m
-
         Random random = new Random();
         int myInt = random.nextInt(1000);
         idShopString = "rubber" + Integer.toString(myInt);
@@ -115,8 +112,8 @@ public class RegisterFragment extends Fragment{
         Toolbar toolbar = getView().findViewById(R.id.toolbarRegister);     //  เสร็จบรรทัดนี้ คุมทั้งบรรทัด กด option+command+m
         ((MainActivity)getActivity()).setSupportActionBar(toolbar);
 
-        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Register");
-        ((MainActivity)getActivity()).getSupportActionBar().setSubtitle("For owner");
+        ((MainActivity)getActivity()).getSupportActionBar().setTitle("สมัครสมาชิก");
+        ((MainActivity)getActivity()).getSupportActionBar().setSubtitle("สำหรับร้านยาง");
 
         ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
         ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);

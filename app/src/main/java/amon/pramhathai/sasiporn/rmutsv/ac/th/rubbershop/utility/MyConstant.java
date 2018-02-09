@@ -9,10 +9,9 @@ public class MyConstant {
     //    About URL
     private String urlAddOwner = "http://androidthai.in.th/gif/addowner.php";
     private String urlGetAllOwner = "http://androidthai.in.th/gif/getAllowner.php";         //  กด Command+n
-    private String urlGetAllCustomer = "";
 
-
-
+    private String urlAddCustomer = "http://androidthai.in.th/gif/addcustomer1.php";
+    private String urlGetAddCustomer = "http://androidthai.in.th/gif/getAllcustomer1.php";
 
 
 
@@ -20,8 +19,13 @@ public class MyConstant {
 
 
     public String getUrlGetAllCustomer() {
-        return urlGetAllCustomer;
+        return urlGetAddCustomer;
     }
+
+    public String getUrlAddCustomer() {
+        return urlAddCustomer;
+    }
+
 
     public String getUrlGetAllOwner() {
         return urlGetAllOwner;

@@ -1,5 +1,6 @@
 package amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.widget.RadioGroup;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.OwnerActivity;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.R;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.GetAllValueFromServer;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.MyAlert;
@@ -29,8 +31,7 @@ public class AuthenFragment extends Fragment {
     private String urlCategoryString, userString, passwordString;
     private MyConstant myConstant;
     private RadioButton ownerRadioButton, coutomerRadioButton;
-
-
+    private String[] loginStrings;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class AuthenFragment extends Fragment {
         setupConstant();
 
 //        Register Controller
-        registerController();                                            // มาจากการกด option+command+m
+        registerController();                                           // มาจากการกด option+command+m
 
 //        Category Controller
         categoryController();                                           // มาจากการกด option+command+m
@@ -94,7 +95,14 @@ public class AuthenFragment extends Fragment {
                                     userAboolean = false;
                                     passwordAboolean = !(passwordString.equals(jsonObject.getString("o_password")));
 
-                                }
+                                    loginStrings = new String[4];
+                                    loginStrings[0] = jsonObject.getString("o_id");
+                                    loginStrings[1] = jsonObject.getString("o_shopname");
+                                    loginStrings[2] = jsonObject.getString("o_idshop");
+                                    loginStrings[3] = jsonObject.getString("o_password");
+
+
+                                }   // if
 
                             } else {
 
@@ -125,6 +133,21 @@ public class AuthenFragment extends Fragment {
                         } else {
 
 //                            Authen True
+                            if (ownerRadioButton.isChecked()) {
+//                                Owner Choose
+                                Intent intent = new Intent(getActivity(), OwnerActivity.class);
+                                intent.putExtra("Login", loginStrings);
+                                getActivity().startActivity(intent);
+                                getActivity().finish();
+
+
+                            } else {
+//                                Customer Choose
+
+
+                            }
+
+
                         }
 
 

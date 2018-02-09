@@ -5,6 +5,7 @@
 
     <!--Toolbar-->
     <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarAddCustomer"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
@@ -15,18 +16,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
             android:background="#b4ffffff"
             android:padding="@dimen/margin"
-            android:layout_margin="@dimen/margin"
+            android:layout_margin="20dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!--Name Store-->
             <LinearLayout
-                android:layout_marginTop="16dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -40,12 +39,13 @@
 
                 <!--Text Name-->
                 <EditText
+                    android:textSize="@dimen/h22"
                     android:hint="ชื่อลูกค้า :"
-                    android:id="@+id/edtNameStore"
+                    android:id="@+id/edtNameCustomer"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorPrimary" />
 
 
             </LinearLayout>
@@ -67,12 +67,13 @@
 
                 <!--Text LName-->
                 <EditText
+                    android:textSize="@dimen/h22"
                     android:hint="นามสกุลลูกค้า :"
-                    android:id="@+id/edtNameStore1"
+                    android:id="@+id/edtSurname"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorPrimary" />
 
 
             </LinearLayout>
@@ -86,19 +87,20 @@
 
                 <!--ICon-->
                 <ImageView
-                    android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_action_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <!--Text Name-->
                 <EditText
+                    android:textSize="@dimen/h22"
+                    android:gravity="start"
                     android:hint="ที่อยู่ :"
-                    android:id="@+id/edtNameStore2"
-                    android:inputType="text"
+                    android:id="@+id/edtAddress"
+                    android:lines="4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorPrimary" />
 
 
             </LinearLayout>
@@ -119,12 +121,13 @@
 
                 <!--Text phone-->
                 <EditText
+                    android:textSize="@dimen/h22"
                     android:hint="เบอร์โทร :"
-                    android:id="@+id/edtNameStore6"
+                    android:id="@+id/edtTel"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorPrimary" />
 
 
             </LinearLayout>
@@ -144,10 +147,13 @@
 
                 <!--Text user-->
                 <TextView
-                    android:id="@+id/edtNameStore7"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/h22"
+                    android:id="@+id/txtUserLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="User Login :"
+                    android:hint="@string/username"
                     android:inputType="text"
                     android:textColor="@color/colorAccent" />
 
@@ -169,10 +175,13 @@
 
                 <!--Text pass-->
                 <TextView
-                    android:id="@+id/edtNameStore5"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/h22"
+                    android:id="@+id/txtPasswordLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="User Login :"
+                    android:hint="@string/password"
                     android:inputType="text"
                     android:textColor="@color/colorAccent"/>
 

@@ -9,29 +9,33 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
+import java.io.IOException;
+
 /**
- * Created by sasiporn on 2/7/2018 AD.
+ * Created by sasiporn on 2/8/2018 AD.
  */
 
-public class PostOwnerToServer extends AsyncTask<String, Void, String>{
+public class PostAddCustomerToServer extends AsyncTask<String, Void, String> {
 
     private Context context;
 
-    public PostOwnerToServer(Context context) {             // context  คือ ท่อในการส่ง data
+    public PostAddCustomerToServer(Context context) {
         this.context = context;
     }
 
     @Override
     protected String doInBackground(String... strings) {
-
         try {
-
             OkHttpClient okHttpClient = new OkHttpClient();
             RequestBody requestBody = new FormEncodingBuilder()
                     .add("isAdd", "true")
-                    .add("o_shopname", strings[0])
-                    .add("o_idshop", strings[1])
-                    .add("o_password", strings[2])
+                    .add("c_id", strings[0])
+                    .add("c_name", strings[1])
+                    .add("c_lname", strings[2])
+                    .add("c_address", strings[3])
+                    .add("c_tel", strings[4])
+                    .add("c_user", strings[5])
+                    .add("c_password", strings[6])
                     .build();
 
             Request.Builder builder = new Request.Builder();

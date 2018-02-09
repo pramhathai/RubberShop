@@ -16,7 +16,7 @@
 
         <TextView
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/h1"
+            android:textSize="@dimen/h24"
             android:textColor="#ffffff"
             android:text="@string/thai_name"
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
             android:background="@color/colorAccent"
             android:text="เข้าสู่ร้านยาง"
             android:textColor="#ffffff"
-            android:textSize="@dimen/h2" />
+            android:textSize="@dimen/h18" />
 
 
         <!--PDF-->
@@ -51,7 +51,7 @@
             android:clickable="true"
             android:text="คู่มือการใช้งาน"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/h2"
+            android:textSize="@dimen/h18"
             android:textStyle="bold"/>
 
     </LinearLayout>

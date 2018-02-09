@@ -73,8 +73,8 @@
                 android:layout_gravity="center_vertical"
                 android:id="@+id/txtIdStore"
                 android:inputType="text"
-                android:textSize="@dimen/h2"
-                android:text="@string/id_store"
+                android:textSize="@dimen/h18"
+                android:text="รหัสร้าน :"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorAccent" />
@@ -116,7 +116,7 @@
 
             <!--Save Button-->
             <Button
-                android:textSize="@dimen/h2"
+                android:textSize="@dimen/h18"
                 android:textColor="#ffffff"
                 android:background="@color/colorAccent"
                 android:id="@+id/btnSave"

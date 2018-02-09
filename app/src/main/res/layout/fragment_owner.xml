@@ -7,18 +7,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
-
-
     <!--WallPaper-->
     <ImageView
         android:scaleType="centerCrop"
         android:src="@drawable/bg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
-
+    <!--toobar-->
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/toobarOwnerHub" />
 
     <LinearLayout
         android:layout_centerInParent="true"
@@ -28,35 +30,33 @@
         android:id="@+id/linearLayout2">
 
         <LinearLayout
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <RelativeLayout
                 android:layout_width="130dp"
                 android:layout_height="150dp">
 
                 <ImageView
-                    android:id="@+id/btno1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/imvBuyRubber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_above="@+id/textView3"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
                     android:background="@color/colorWhite"
-                    android:src="@drawable/shop"
-                    android:text=" รับซื้อยาง "
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/h2" />
+                    android:src="@drawable/buy_rubber" />
 
                 <TextView
                     android:gravity="center"
-                    android:background="#82c75ef7"
+                    android:background="#41a505"
                     android:padding="5dp"
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/h2"
+                    android:textSize="@dimen/h18"
                     android:text="รับซื้อยาง"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -67,30 +67,28 @@
 
 
             <RelativeLayout
+                android:layout_marginLeft="10dp"
                 android:layout_width="130dp"
                 android:layout_height="150dp">
 
                 <ImageView
-                    android:id="@+id/btno12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/imvEditPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_above="@+id/textView4"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:background="@color/colorWhite"
-                    android:src="@drawable/money1"
-                    android:text=" รับซื้อยาง "
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/h2" />
+                    android:src="@drawable/edit_price"/>
 
                 <TextView
                     android:gravity="center"
-                    android:background="#82c75ef7"
+                    android:background="#e01172"
                     android:padding="5dp"
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/h2"
-                    android:text="ราคายาง"
+                    android:textSize="@dimen/h18"
+                    android:text="แก้ไขราคายาง"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView4" />
@@ -111,25 +109,22 @@
                 android:layout_height="150dp">
 
                 <ImageView
-                    android:id="@+id/btno13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:src="@drawable/add_customer"
+                    android:id="@+id/imvCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_above="@+id/textView"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:background="@color/colorWhite"
-                    android:src="@drawable/add_user"
-                    android:text=" รับซื้อยาง "
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/h2" />
+                    android:background="@color/colorWhite"/>
 
                 <TextView
                     android:gravity="center"
-                    android:background="#82c75ef7"
+                    android:background="#d4d216"
                     android:padding="5dp"
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/h2"
+                    android:textSize="@dimen/h18"
                     android:text="ลูกค้า"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -139,29 +134,27 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:layout_marginLeft="10dp"
                 android:layout_width="130dp"
                 android:layout_height="150dp">
 
                 <ImageView
-                    android:id="@+id/btno11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/imvDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_above="@+id/textView2"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:background="@color/colorWhite"
-                    android:src="@drawable/disc"
-                    android:text=" รับซื้อยาง "
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/h2" />
+                    android:src="@drawable/buy_report" />
 
                 <TextView
                     android:gravity="center"
-                    android:background="#82c75ef7"
+                    android:background="#da5c10"
                     android:padding="5dp"
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/h2"
+                    android:textSize="@dimen/h18"
                     android:text="ข้อมูลการรับซื้อ"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -176,13 +169,6 @@
 
 
     </LinearLayout>
-
-
-
-
-
-
-
 
 
 </RelativeLayout>
