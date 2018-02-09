@@ -1,5 +1,6 @@
 package amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.fragment;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,20 +14,22 @@ import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.OwnerActivity;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.R;
 
 /**
- * Created by sasiporn on 2/9/2018 AD.
+ * Created by DR-PC61059 on 9/2/2561.
  */
 
-public class BuyRubberFragment extends Fragment {
+public class SheetRubberFragment extends Fragment {
 
     private String[] loginStrings;
 
-    public static BuyRubberFragment buyRubberInstance(String[] loginstrings) {
-        BuyRubberFragment buyRubberFragment = new BuyRubberFragment();
+    public static SheetRubberFragment sheetRubberFragment(String[] loginStrings) {
+        SheetRubberFragment sheetRubberFragment = new SheetRubberFragment();
         Bundle bundle = new Bundle();
-        bundle.putStringArray("Login", loginstrings);
-        buyRubberFragment.setArguments(bundle);
-        return buyRubberFragment;
+        bundle.putStringArray("Login",loginStrings);
+        sheetRubberFragment.setArguments(bundle);
+        return sheetRubberFragment;
     }
+
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -34,17 +37,18 @@ public class BuyRubberFragment extends Fragment {
 
         loginStrings = getArguments().getStringArray("Login");
 
-//        Create Toolbar
+        //create toolbar
         createToolbar();
 
 
-    }   // main method
+    }   //main Method
 
     private void createToolbar() {
-        Toolbar toolbar = getView().findViewById(R.id.toolbarBuyRubber);
+        Toolbar toolbar = getView().findViewById(R.id.toolbarSheetRubber);
+
         ((OwnerActivity)getActivity()).setSupportActionBar(toolbar);
 
-        ((OwnerActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.buy_rubber));
+        ((OwnerActivity) getActivity()).getSupportActionBar().setTitle(getString(R.string.sheetrubber));
         ((OwnerActivity) getActivity()).getSupportActionBar().setSubtitle(getString(R.string.user_login) + loginStrings[1]);
 
         ((OwnerActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
@@ -64,7 +68,7 @@ public class BuyRubberFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_buy_rubber, container, false);
+        View view = inflater.inflate(R.layout.fragment_buy_rubber_sheet, container, false);
         return view;
     }
 }
