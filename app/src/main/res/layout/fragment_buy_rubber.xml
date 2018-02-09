@@ -30,7 +30,7 @@
             <ImageView
             android:layout_width="230dp"
             android:layout_height="95dp"
-            android:background="@drawable/rub"
+            android:background="@drawable/prub"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/h1" />
 
@@ -42,14 +42,14 @@
             android:background="#82c75ef7"
             android:gravity="center"
             android:padding="5dp"
-            android:text="รับซื้อยาง"
+            android:text="รับซื้อน้ำยาง"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/h2" />
 
         <ImageView
                         android:layout_marginTop="8dp"
                         android:textColor="@color/colorPrimaryDark"
-                        android:background="@drawable/rrrub"
+                        android:background="@drawable/prrrub"
                         android:textSize="@dimen/h1"
                         android:layout_width="230dp"
                         android:layout_height="100dp" />
@@ -69,7 +69,7 @@
         <ImageView
                 android:layout_marginTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/rrub"
+                android:background="@drawable/prrub"
                 android:textSize="@dimen/h1"
                 android:layout_width="230dp"
                 android:layout_height="100dp" />

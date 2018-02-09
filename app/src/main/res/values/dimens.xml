@@ -6,4 +6,6 @@
     <dimen name="h22">22sp</dimen>
     <dimen name="logo">100dp</dimen>
     <dimen name="marginTop">20dp</dimen>
+    <dimen name="h1">24dp</dimen>
+    <dimen name="h2">18dp</dimen>
 </resources>
