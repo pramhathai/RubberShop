@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.CustomerActivity">
 
+    <FrameLayout
+        android:id="@+id/contentCustomerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
 </android.support.constraint.ConstraintLayout>

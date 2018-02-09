@@ -16,6 +16,7 @@ import android.widget.RadioGroup;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.CustomerActivity;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.OwnerActivity;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.R;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.GetAllValueFromServer;
@@ -101,17 +102,24 @@ public class AuthenFragment extends Fragment {
                                     loginStrings[2] = jsonObject.getString("o_idshop");
                                     loginStrings[3] = jsonObject.getString("o_password");
 
-
                                 }   // if
-
                             } else {
 
 //                            Choose Customer
-
+                                if (userString.equals(jsonObject.getString("c_user"))) {
+                                    userAboolean = false;
+                                    passwordAboolean = !(passwordString.equals(jsonObject.getString("c_password")));
+                                    loginStrings = new String[7];
+                                    loginStrings[0] =jsonObject.getString("c_id");
+                                    loginStrings[1] =jsonObject.getString("c_name");
+                                    loginStrings[2] =jsonObject.getString("c_lname");
+                                    loginStrings[3] =jsonObject.getString("c_address");
+                                    loginStrings[4] =jsonObject.getString("c_tel");
+                                    loginStrings[5] =jsonObject.getString("c_user");
+                                    loginStrings[6] =jsonObject.getString("c_password");
+                                }
 
                             }   // if
-
-
                         }   // for
 
                         if (userAboolean) {
@@ -128,8 +136,6 @@ public class AuthenFragment extends Fragment {
                             myAlert.normalDialog("Password False",
                                     "Please Try Again Password False");
 
-
-
                         } else {
 
 //                            Authen True
@@ -143,6 +149,10 @@ public class AuthenFragment extends Fragment {
 
                             } else {
 //                                Customer Choose
+                                Intent intent = new Intent(getActivity(), CustomerActivity.class);
+                                intent.putExtra("Login", loginStrings);
+                                getActivity().startActivity(intent);
+                                getActivity().finish();
 
 
                             }

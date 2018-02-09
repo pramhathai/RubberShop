@@ -29,17 +29,17 @@ public class PostAddCustomerToServer extends AsyncTask<String, Void, String> {
             OkHttpClient okHttpClient = new OkHttpClient();
             RequestBody requestBody = new FormEncodingBuilder()
                     .add("isAdd", "true")
-                    .add("c_id", strings[0])
-                    .add("c_name", strings[1])
-                    .add("c_lname", strings[2])
-                    .add("c_address", strings[3])
-                    .add("c_tel", strings[4])
-                    .add("c_user", strings[5])
-                    .add("c_password", strings[6])
+                    .add("c_name", strings[0])
+                    .add("c_lname", strings[1])
+                    .add("c_address", strings[2])
+                    .add("c_tel", strings[3])
+                    .add("c_user", strings[4])
+                    .add("c_password", strings[5])
+                    .add("o_idshop", strings[6])
                     .build();
 
             Request.Builder builder = new Request.Builder();
-            Request request = builder.url(strings[3]).post(requestBody).build();
+            Request request = builder.url(strings[7]).post(requestBody).build();
             Response response = okHttpClient.newCall(request).execute();
             return response.body().string();
 

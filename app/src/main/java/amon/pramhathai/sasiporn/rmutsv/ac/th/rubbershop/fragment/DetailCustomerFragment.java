@@ -5,15 +5,23 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.OwnerActivity;
 import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.R;
+import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.GetAllValueFromServer;
+import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.MyConstant;
 
 /**
  * Created by sasiporn on 2/8/2018 AD.
@@ -41,8 +49,45 @@ public class DetailCustomerFragment extends Fragment{
 //        Create Toolbar
         createToolbar();
 
+//        Create ListView
+        createListView();
+
 
     }   // main method
+
+    private void createListView() {
+        ListView listView = getView().findViewById(R.id.listViewCustomer);
+        MyConstant myConstant = new MyConstant();
+        String tag = "9FebV1";
+
+        try {
+
+            GetAllValueFromServer getAllValueFromServer = new GetAllValueFromServer(getActivity());
+            getAllValueFromServer.execute(myConstant.getUrlGetAllCustomer());
+
+            String jsonString = getAllValueFromServer.get();
+            Log.d(tag, "JSON ==> " + jsonString);
+            JSONArray jsonArray = new JSONArray(jsonString);
+            String[] nameStrings = new String[jsonArray.length()];
+
+            for (int i=0; i<jsonArray.length(); i+=1) {
+
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                nameStrings[i] = jsonObject.getString("c_name");
+
+            }   // for
+
+            ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(
+                    getActivity(), android.R.layout.simple_list_item_1, nameStrings);
+
+            listView.setAdapter(stringArrayAdapter);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -67,9 +112,6 @@ public class DetailCustomerFragment extends Fragment{
         return super.onOptionsItemSelected(item);
     }
 
-
-
-
     private void createToolbar() {
         Toolbar toolbar = getView().findViewById(R.id.toobarDetailCustomer);
         ((OwnerActivity)getActivity()).setSupportActionBar(toolbar);
@@ -86,15 +128,9 @@ public class DetailCustomerFragment extends Fragment{
             }
         });
 
-
         setHasOptionsMenu(true);
 
-
     }
-
-
-
-
 
     @Nullable
     @Override
@@ -102,9 +138,6 @@ public class DetailCustomerFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_detail_customer, container, false);
         return view;                                            //  มาจากการกด Alt+Enter
     }
-
-
-
 
 
 }   // main class

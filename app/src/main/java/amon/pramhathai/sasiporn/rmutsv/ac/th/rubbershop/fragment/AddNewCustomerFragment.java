@@ -32,7 +32,7 @@ import amon.pramhathai.sasiporn.rmutsv.ac.th.rubbershop.utility.PostOwnerToServe
 public class AddNewCustomerFragment extends Fragment{
 
     private String[] loginStrings;
-    private String ideditString, nameeditString, surnameeditString, addresseditString, teleditString,
+    private String nameeditString, surnameeditString, addresseditString, teleditString,
             userloginString, passwordloginString;
 
 
@@ -119,9 +119,15 @@ public class AddNewCustomerFragment extends Fragment{
             try {
                 MyConstant myConstant = new MyConstant();
                 PostAddCustomerToServer postAddCustomerToServer = new PostAddCustomerToServer(getActivity());
-                postAddCustomerToServer.execute(ideditString, nameeditString, surnameeditString,
-                        addresseditString, teleditString,
-                        userloginString, passwordloginString, myConstant.getUrlAddCustomer());
+                postAddCustomerToServer.execute(
+                        nameeditString,
+                        surnameeditString,
+                        addresseditString,
+                        teleditString,
+                        userloginString,
+                        passwordloginString,
+                        loginStrings[2],
+                        myConstant.getUrlAddCustomer());
 
                 if (Boolean.parseBoolean(postAddCustomerToServer.get())) {
 //                            Success upload

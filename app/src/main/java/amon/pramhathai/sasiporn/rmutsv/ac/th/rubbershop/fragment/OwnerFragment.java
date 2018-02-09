@@ -43,8 +43,30 @@ public class OwnerFragment extends Fragment {
 //        Customer Controller
         customerController();
 
+//        BuyRubber Contoller
+        buyRubberContoller();
+
 
     }   // main method
+
+    private void buyRubberContoller() {
+        ImageView imageView = getView().findViewById(R.id.imvBuyRubber);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentOwnerFragment,
+                                BuyRubberFragment.buyRubberInstance(loginStrings))
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+
+
+
+    }
 
     private void customerController() {
         ImageView imageView = getView().findViewById(R.id.imvCustomer);
@@ -60,7 +82,6 @@ public class OwnerFragment extends Fragment {
         });
 
     }
-
 
     private void createToolbar() {
         Toolbar toolbar = getView().findViewById(R.id.toobarOwnerHub);

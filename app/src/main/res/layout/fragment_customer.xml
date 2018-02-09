@@ -116,11 +116,11 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:background="@color/colorWhite"
-                    android:src="@drawable/buy_rubber" />
+                    android:src="@drawable/money" />
 
                 <TextView
                     android:gravity="center"
-                    android:background="#41a505"
+                    android:background="#2616f5"
                     android:padding="5dp"
                     android:layout_alignParentBottom="true"
                     android:textColor="@color/colorWhite"
@@ -147,7 +147,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:background="@color/colorWhite"
-                    android:src="@drawable/buy_report" />
+                    android:src="@drawable/sale_data" />
 
                 <TextView
                     android:gravity="center"
